@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Your Pick</h2>
+    <hr>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        {% for song in songs %}
+
+        <div class="container border-dark d-flex justify-content-start align-items-center gap-3 ">
+            
+            <h2>{{ song.song_name }}</h2>
+            
+            <h3>by <span>{{song.artist}}</span></h3>
+
+            <h3>  Genre:-<span>{{song.genre}}</span></h3>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2>Recommended</h2>
+    <hr>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        {% for song in recommended %}
+
+        <div class="container border-dark d-flex justify-content-start align-items-center gap-3 ">
+            
+            <h3>{{ song.song_name }}</h3>
+            
+            <h2>by <span>{{song.artist}}</span></h2>
+
+            <h3>  Genre:-<span>{{song.genre}}</span></h3>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}

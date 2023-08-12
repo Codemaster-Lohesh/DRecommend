@@ -1,0 +1,38 @@
+body{
+    min-height: 100vh;
+}
+
+.main-wrapper{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    margin: 2rem;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.account-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-img{
+    border-radius: 50%;
+    border: 2px solid gray;
+    width: 10rem;
+    height: 10rem;
+}
+
+.display-img{
+    border-radius: 50%;
+    border: 2px solid gray;
+    width: 3rem;
+    height: 3rem;
+}

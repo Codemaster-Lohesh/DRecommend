@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="d-flex flex-column align-items-center">
+    {% for song in songs %}
+
+        <div class="container border-dark d-flex justify-content-start align-items-center gap-3 ">
+            
+            <h2>{{ song.song_name }}</h2>
+            
+            <h3>by <span>{{song.artist}}</span></h3>
+
+            <h3>  Genre:-<span>{{song.genre}}</span></h3>
+            
+            <div>
+                <a class="btn btn-success btn-sm mt-1 mb-1" href="{{ url_for('add_song', user_id=user.id, song_id=song.id) }}">Add</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

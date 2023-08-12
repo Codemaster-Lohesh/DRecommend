@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        <h1>Welcome to DRecommend</h1>
+        <p>Your Own music recommendation website</p>
+        <div class="d-flex justify-content-center align-items-center min-vw-100 gap-4">
+            <a href="{{url_for('register')}}" class="btn btn-dark">Register</a>
+            <a href="{{url_for('login')}}" class="btn btn-dark">Login</a>
+        </div>
+    </div>
+{% endblock content %}

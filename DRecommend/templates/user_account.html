@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="account-details">
+            <img class="account-img" src="{{ image_file }}" alt="">
+            <h1>{{ user.username }}</h1>
+        </div>
+        
+        <h2>This User's picks</h2>
+        <hr>
+
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+            {% for song in songs %}
+    
+            <div class="container border-dark d-flex justify-content-start align-items-center gap-3 ">
+                
+                <h3>{{ song.song_name }}</h3>
+                
+                <h2>by <span>{{song.artist}}</span></h2>
+    
+                <h3>  Genre:-<span>{{song.genre}}</span></h3>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content%}
